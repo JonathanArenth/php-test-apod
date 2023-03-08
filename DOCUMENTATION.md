@@ -18,8 +18,8 @@
 - friendsofsymfony/jsrouting-bundle => pour pouvoir apeller les routes depuis le js
 
 # Configuration du projet
-- composer install
 - Ajouter la base de donnée dans le .env
+- composer install
 - php bin/console doctrine:database:create => création de la base de donnée de dev
 - php bin/console doctrine:migrations:migrate => envoie les migrations dans la base de donnée
 - Ajouter la base de donnée dans le .env.test 
