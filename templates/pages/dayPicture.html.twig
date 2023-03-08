@@ -1,20 +1,19 @@
 {% extends "base.html.twig" %}
 {% block body %}
-<h1>Nasa Picture</h1>
-<div class="container">
-    <div>
-        <div class="user">
-            <img src="{{avatar}}" alt="avatar" class="avatar">
-            <div>{{user}}</div>
+<div class="user">
+    <img src="{{avatar}}" alt="avatar" class="avatar">
+    <div>{{user}}</div>
+</div>
+<div class="pageContainer">
+    <div class="card">
+        <div class="title">
+            <h2>{{title}}</h2>
+            <div>{{date}}</div>
         </div>
+        <div class="blockImage">
+            <img src="{{image}}" alt="image" class="image">
+        </div>
+        <div>{{explanation}}</div>
     </div>
-    <div class="title">
-        <h2>{{title}}</h2>
-        <div>{{date}}</div>
-    </div>
-    <div class="blockImage">
-        <img src="{{image}}" alt="image" class="image">
-    </div>
-    <div>{{explanation}}</div>
 </div>
 {% endblock %}

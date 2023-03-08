@@ -14,8 +14,10 @@
 - knpuniversity/oauth2-client-bundle => pour la connexion avec le service OAuth2
 - league/oauth2-google => provider pour l'api google
 - Symfony/security => gère les autorisations, les providers
+- webpack-encore => pour gérer le css
+- friendsofsymfony/jsrouting-bundle => pour pouvoir apeller les routes depuis le js
 
-# Lancement du projet
+# Configuration du projet
 - composer install
 - Ajouter la base de donnée dans le .env
 - php bin/console doctrine:database:create => création de la base de donnée de dev
@@ -25,11 +27,15 @@
 - php bin/console --env=test doctrine:schema:create => création du schéma de la base de test
 - php bin/console --env=test doctrine:fixtures:load => charge les données de test dans la base de test
 - NASA_API_KEY="votre clé api ici" est a ajouter dans le .env et le .env.test
-
-
+- GOOGLE_CLIENT_ID="votre clé api ici" a ajouter dans le .env
+- GOOGLE_CLIENT_SECRET="votre clé secrete ici" a ajouter dans le .env
 
 # Lancement des tests:
 php bin/phpunit
 
 # Lancer la commande cli pour récupérer la photo du jour
 php bin/console app:fetchPictureNasa
+
+# lancer les server local
+symfony server:start
+npm run watch ou npm run dev-server

@@ -55,7 +55,6 @@ class GoogleAuthenticator extends OAuth2Authenticator implements AuthenticationE
                 $userRepo = $this->entityManager->getRepository(User::class);
                 $existingUser = $userRepo->findOneBy(['googleId' => $googleUser->getId()]);
                 if ($existingUser){
-                    //dd('existing user', $existingUser);
                     return $existingUser;
                 }
                 $user = new User();
@@ -66,7 +65,6 @@ class GoogleAuthenticator extends OAuth2Authenticator implements AuthenticationE
                 $user->setHostedDomain($googleUser->getHostedDomain());
                 $this->entityManager->persist($user);
                 $this->entityManager->flush();
-                //dd($user);
                 return $user;
              })
             );

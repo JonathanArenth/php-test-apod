@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class GoogleController extends AbstractController
 {
     /**
-     * @Route("/connect/google", name="connect_google")
+     * @Route("/connect/google", options={"expose"=true}, name="connect_google")
      */
     public function connectAction(ClientRegistry $clientRegistry): Response
     {
@@ -17,7 +17,7 @@ class GoogleController extends AbstractController
     }
 
     /**
-     * @Route("/connect/google/check", name="connect_google_check")
+     * @Route("/connect/google/check", options={"expose"=true}, name="connect_google_check")
      */
     public function connectCheckAction()
     {

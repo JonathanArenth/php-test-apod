@@ -4,13 +4,12 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User implements UserInterface
+class User
 {
     /**
      * @ORM\Id
@@ -35,7 +34,7 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column()
+     * @ORM\Column(type="json")
      */
     private $roles = [];
 
@@ -132,16 +131,4 @@ class User implements UserInterface
 
         return $this;
     }
-
-    public function getUsername()
-    {
-        return $this->email;
-    }
-
-    public function eraseCredentials()
-    {}
-    public function getSalt()
-    {}
-    public function getPassword()
-    {}
 }
