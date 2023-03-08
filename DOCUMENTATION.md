@@ -20,8 +20,12 @@
 - php bin/console --env=test doctrine:database:create => créer la base de donnée de test
 - php bin/console --env=test doctrine:schema:create => création du schéma de la base de test
 - php bin/console --env=test doctrine:fixtures:load => charge les données de test dans la base de test
+- NASA_API_KEY="votre clé api ici" est a ajouter dans le .env et le .env.test
 
 
 
 # Lancement des tests:
 php bin/phpunit
+
+# Lancer la commande cli pour récupérer la photo du jour
+php bin/console app:fetchPictureNasa
