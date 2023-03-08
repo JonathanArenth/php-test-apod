@@ -9,7 +9,8 @@
 - orm-fixtures => pour générer des données de test
 - symfony/http-client => pour effectuer les requêtes à l'api de la Nasa
 - dama/doctrine-test-bundle => annule les transaction de base de donnée une fois le test effectuer
-- require symfony/validator => permet de réaliser des Asssertion de vérification sur chaque attributs
+- symfony/validator => permet de réaliser des Asssertion de vérification sur chaque attributs
+- Twig = > pour rendre les vues
 
 # Lancement du projet
 - composer install
