@@ -6,10 +6,17 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PictureControllerTest extends WebTestCase
 {
-    public function testPicturePage()
+    //public function testPicturePage()
+    //{
+    //    $client = static::createClient();
+    //    $client->request('GET', '/dayPicture');
+    //    $this->assertSelectorTextContains('h1', 'Nasa Picture');
+    //}
+
+    public function testPicturePagerestricted()
     {
         $client = static::createClient();
         $client->request('GET', '/dayPicture');
-        $this->assertSelectorTextContains('h1', 'Nasa Picture');
+        $this->assertResponseStatusCodeSame(Response::HTTP_TEMPORARY_REDIRECT);
     }
 }

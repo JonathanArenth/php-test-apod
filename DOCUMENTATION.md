@@ -11,6 +11,9 @@
 - dama/doctrine-test-bundle => annule les transaction de base de donnée une fois le test effectuer
 - symfony/validator => permet de réaliser des Asssertion de vérification sur chaque attributs
 - Twig = > pour rendre les vues
+- knpuniversity/oauth2-client-bundle => pour la connexion avec le service OAuth2
+- league/oauth2-google => provider pour l'api google
+- Symfony/security => gère les autorisations, les providers
 
 # Lancement du projet
 - composer install
