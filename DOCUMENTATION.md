@@ -20,6 +20,7 @@
 # Configuration du projet
 - Ajouter la base de donnée dans le .env
 - composer install
+- npm install
 - php bin/console doctrine:database:create => création de la base de donnée de dev
 - php bin/console doctrine:migrations:migrate => envoie les migrations dans la base de donnée
 - Ajouter la base de donnée dans le .env.test 
