@@ -45,15 +45,13 @@ class GoogleAuthenticator extends OAuth2Authenticator implements AuthenticationE
     {
         $client = $this->clientRegistry->getClient('google');
         $accessToken = $this->fetchAccessToken($client);
+        if ($accessToken->hasExpired()){
+            $accessToken->getRefreshToken();
+        }
 
         return new SelfValidatingPassport(
             new UserBadge($accessToken->getToken(), function() use ($accessToken, $client)
              {
-                if ($accessToken->hasExpired()){
-                    $accessToken = $client->getAccessToken([
-                        'refresh_token' => $accessToken->getRefreshToken()
-                    ]);
-                }
                 /** @var GoogleUser $googleUser */
                 $googleUser = $client->fetchUserFromToken($accessToken);
                 $email = $googleUser->getEmail();

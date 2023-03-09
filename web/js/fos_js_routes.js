@@ -1,0 +1,1 @@
+fos.Router.setData({"base_url":"","routes":{"connect_google":{"tokens":[["text","\/connect\/google"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]},"day_picture":{"tokens":[["text","\/dayPicture"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":[],"schemes":[]}},"prefix":"","host":"localhost","port":"","scheme":"http","locale":""});

@@ -39,4 +39,4 @@ php bin/console app:fetchPictureNasa
 
 # lancer les server local
 symfony server:start
-npm run watch ou npm run dev-server
+npm run watch (lancera le style et le js)

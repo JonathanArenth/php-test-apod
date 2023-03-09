@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PictureController extends AbstractController
 {
     /**
-     * @Route("/dayPicture", options={"expose"=true}, name="day_picture")
+     * @Route("/dayPicture", name="day_picture")
      */
     public function getDayPicture(
         PictureRepository $pictureRepository,

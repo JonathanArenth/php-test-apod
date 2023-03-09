@@ -17,7 +17,7 @@ class GoogleController extends AbstractController
     }
 
     /**
-     * @Route("/connect/google/check", options={"expose"=true}, name="connect_google_check")
+     * @Route("/connect/google/check", name="connect_google_check")
      */
     public function connectCheckAction()
     {
